@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3.org/2000/svg">
+  <xs:element name="svg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="g">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="path">
+                <xs:complexType>
+                  <xs:attribute name="d" use="required" />
+                  <xs:attribute name="marker-end" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="stroke-width" type="xs:integer" use="required" />
+            <xs:attribute name="stroke" use="required" />
+            <xs:attribute name="fill" use="required" />
+            <xs:attribute name="stroke-linecap" use="required" />
+            <xs:attribute name="stroke-linejoin" use="required" />
+            <xs:attribute name="transform" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="defs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="marker">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="polygon">
+                      <xs:complexType>
+                        <xs:attribute name="points" use="required" />
+                        <xs:attribute name="fill" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="markerWidth" type="xs:integer" use="required" />
+                  <xs:attribute name="markerHeight" type="xs:integer" use="required" />
+                  <xs:attribute name="refX" type="xs:decimal" use="required" />
+                  <xs:attribute name="refY" type="xs:decimal" use="required" />
+                  <xs:attribute name="viewBox" use="required" />
+                  <xs:attribute name="orient" use="required" />
+                  <xs:attribute name="id" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:decimal" use="required" />
+      <xs:attribute name="viewBox" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
